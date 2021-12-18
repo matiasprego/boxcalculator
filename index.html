@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Website</title>
+</head>
+<script>
+    function calculator() {
+    var x = Number(document.getElementById("x").value);
+    var y = Number(document.getElementById("y").value);
+    var z = Number(document.getElementById("z").value);
+    var p = Number(30);
+    var result;
+    var calc = document.getElementById("choice").value
+    switch (calc) {
+        case "1":
+        result = z * p;
+        break;
+        case "2":
+        result = x * p + 50;
+        break;
+        case "3":
+        result = x * p + 30;
+        break;
+
+    }
+
+    document.getElementById("result").innerHTML = " = " + result;
+
+    }
+</script>
+
+<body>
+    <div>
+        <h1>Cost Estimator</h1>
+        <form>
+        <input type= "numbers" id="x" placeholder = "Length" /><br />
+        <input type= "numbers" id="y" placeholder = "Width"/><br />
+        <input type= "numbers" id="z" placeholder = "Height"/><br />
+       
+        <select id="choice" >
+           <option value = "" ></option>
+           <option value = "1">option 1</option>
+           <option value = "2">0ption 2</option>
+        <option value = "3">option 3</option>
+         </select>
+         <br/>
+         <br/>
+         <input id= "est" type="button" value = "Estimate" onclick= "calculator()"/>
+         <input id= "reset" type="reset" value = "Reset"/>
+       </form>
+       <h1 id="result"> = </h1>
+       </div>
+
+</body>
+
+</html>
