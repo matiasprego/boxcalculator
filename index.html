@@ -4,52 +4,51 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Your Website</title>
+	<title>Calculador Prienzo</title>
 </head>
-<script>
-    function calculator() {
-    var x = Number(document.getElementById("x").value);
-    var y = Number(document.getElementById("y").value);
-    var z = Number(document.getElementById("z").value);
-    var p = Number(30);
-    var result;
-    var calc = document.getElementById("choice").value
-    switch (calc) {
-        case "1":
-        result = z * p;
-        break;
-        case "2":
-        result = x * p + 50;
-        break;
-        case "3":
-        result = x * p + 30;
-        break;
-
-    }
-
-    document.getElementById("result").innerHTML = " = " + result;
-
-    }
-</script>
+<script src="calculador.js"></script>
 
 <body>
     <div>
-        <h1>Cost Estimator</h1>
+        <h1>Calculador de cajas Prienzo</h1>
         <form>
-        <input type= "numbers" id="x" placeholder = "Length" /><br />
-        <input type= "numbers" id="y" placeholder = "Width"/><br />
-        <input type= "numbers" id="z" placeholder = "Height"/><br />
-       
-        <select id="choice" >
-           <option value = "" ></option>
-           <option value = "1">option 1</option>
-           <option value = "2">0ption 2</option>
-        <option value = "3">option 3</option>
+        <input type= "numbers" id="x" placeholder = "Largo" /><br />
+        <input type= "numbers" id="y" placeholder = "Ancho"/><br />
+        <input type= "numbers" id="z" placeholder = "Alto"/><br />
+        <p>Tipo de cartón</p>
+        <select id="tipo-carton" >
+            <option value = "Tipo de cartón" ></option>
+            <option value = "1">Marrón-marrón</option>
+            <option value = "2">Blanco-marrón</option>
+            <option value = "3">Blanco HQ-marrón</option>
+         </select><br />
+         <p>Tipo de caja</p>
+        <select id="tipo-caja" >
+            <option value = "Tipo de caja" ></option>
+            <option value = "1">F201</option>
+            <option value = "2">F200</option>
+            <option value = "3">F203</option>
+            <option value = "4">F215</option>
+            <option value = "5">F426</option>
+            <option value = "6">F427</option>
          </select>
+         <p>Tipo de medida</p>
+        <input type="radio" id="interior" name="tipo-medida" value="interior" checked>
+        <label for="interior">interior</label>
+        <input type="radio" id="exterior" name="tipo-medida" value="exterior">
+        <label for="exterior">exterior</label>
+        <br />
+        <p>Impresión</p>
+        <input type="radio" id="sin-impresion" name="tipo-impresion" value="sin-impresion" checked>
+        <label for="sin-impresion">Sin Impresión</label>
+        <input type="radio" id="impresion-logo" name="tipo-impresion" value="impresion-logo">
+        <label for="exterior">Impresión de logo</label>
+        <input type="radio" id="impresion-total" name="tipo-impresion" value="impresion-total">
+        <label for="exterior">Impresión total</label>
          <br/>
          <br/>
-         <input id= "est" type="button" value = "Estimate" onclick= "calculator()"/>
-         <input id= "reset" type="reset" value = "Reset"/>
+         <input id= "est" type="button" value = "Calcular" onclick= "calculator()"/>
+         <input id= "reset" type="reset" value = "Borrar todo"/>
        </form>
        <h1 id="result"> = </h1>
        </div>
