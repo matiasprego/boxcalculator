@@ -1,3 +1,6 @@
+// definiciones
+var valor_dolar = "45";
+
 function calculator() {
     var x = Number(document.getElementById("x").value);
     var y = Number(document.getElementById("y").value);
