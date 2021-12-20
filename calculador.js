@@ -1,6 +1,8 @@
 // definiciones
 var valor_dolar = "45";
 
+//aca haces un cambio y lo guardas
+
 //funciones
 
 function calculo_area() {
