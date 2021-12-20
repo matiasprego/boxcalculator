@@ -7,56 +7,69 @@
 	<title>Calculador Prienzo</title>
 </head>
 <script src="calculador.js"></script>
+<style>
+    .half {
+        width:49%;
+        display:inline-block;
+    }
+</style>
 
 <body>
-    <div>
+    <div class="wrapper">
         <h1>Calculador de cajas Prienzo</h1>
-        <form>
-        <input type= "numbers" id="x" placeholder = "Largo" /><br />
-        <input type= "numbers" id="y" placeholder = "Ancho"/><br />
-        <input type= "numbers" id="z" placeholder = "Alto"/><br />
-        <p>Tipo de cartón</p>
-        <select id="tipo-carton" >
-            <option value = "Tipo de cartón" ></option>
-            <option value = "1">Marrón-marrón</option>
-            <option value = "2">Blanco-marrón</option>
-            <option value = "3">Blanco HQ-marrón</option>
-         </select><br />
-         <p>Tipo de caja</p>
-        <select id="tipo-caja" >
-            <option value = "Tipo de caja" ></option>
-            <option value = "1">F201</option>
-            <option value = "2">F200</option>
-            <option value = "3">F203</option>
-            <option value = "4">F215</option>
-            <option value = "5">F426</option>
-            <option value = "6">F427</option>
-         </select>
-         <p>Tipo de medida</p>
-        <input type="radio" id="interior" name="tipo-medida" value="interior" checked>
-        <label for="interior">interior</label>
-        <input type="radio" id="exterior" name="tipo-medida" value="exterior">
-        <label for="exterior">exterior</label>
-        <br />
-        <p>Impresión</p>
-        <input type="radio" id="sin-impresion" name="tipo-impresion" value="sin-impresion" checked>
-        <label for="sin-impresion">Sin Impresión</label>
-        <input type="radio" id="impresion-logo" name="tipo-impresion" value="impresion-logo">
-        <label for="exterior">Impresión de logo</label>
-        <input type="radio" id="impresion-total" name="tipo-impresion" value="impresion-total">
-        <label for="exterior">Impresión total</label>
-         <br/>
-
-         <label for="cantidad-cajas">Cantidad de cajas:</label>
-
-<input type="number" id="cantidad-cajas" name="cantidad-cajas"
-       min="0" max="">
-         <br/>
-         <input id= "est" type="button" value = "Calcular" onclick= "calculator()"/>
-         <input id= "reset" type="reset" value = "Borrar todo"/>
-       </form>
-       <h1 id="result"> = </h1>
-       </div>
+        <div class="half">
+            <form>
+                <input type= "numbers" id="largo" placeholder = "Largo" /><br />
+                <input type= "numbers" id="ancho" placeholder = "Ancho"/><br />
+                <input type= "numbers" id="alto" placeholder = "Alto"/><br />
+                <p>Tipo de cartón</p>
+                <select id="tipo-carton" >
+                    <option value = "Tipo de cartón" ></option>
+                    <option value = "1">Marrón-marrón</option>
+                    <option value = "2">Blanco-marrón</option>
+                    <option value = "3">Blanco HQ-marrón</option>
+                 </select><br />
+                 <p>Tipo de caja</p>
+                <select id="tipo-caja" >
+                    <option value = "Tipo de caja" ></option>
+                    <option value = "1">F201</option>
+                    <option value = "2">F200</option>
+                    <option value = "3">F203</option>
+                    <option value = "4">F215</option>
+                    <option value = "5">F426</option>
+                    <option value = "6">F427</option>
+                 </select>
+                 <p>Tipo de medida</p>
+                <input type="radio" id="interior" name="tipo-medida" value="interior" checked>
+                <label for="interior">interior</label>
+                <input type="radio" id="exterior" name="tipo-medida" value="exterior">
+                <label for="exterior">exterior</label>
+                <br />
+                <p>Impresión</p>
+                <input type="radio" id="sin-impresion" name="tipo-impresion" value="sin-impresion" checked>
+                <label for="sin-impresion">Sin Impresión</label>
+                <input type="radio" id="impresion-logo" name="tipo-impresion" value="impresion-logo">
+                <label for="exterior">Impresión de logo</label>
+                <input type="radio" id="impresion-total" name="tipo-impresion" value="impresion-total">
+                <label for="exterior">Impresión total</label>
+                 <br/>
+        
+                 <label for="cantidad-cajas">Cantidad de cajas:</label>
+        
+                <input type="number" id="cantidad-cajas" name="cantidad-cajas"
+                    min="0" max="">
+                <br/>
+                <input id= "est" type="button" value = "Calcular" onclick= "calculator()"/>
+                <input id= "reset" type="reset" value = "Borrar todo"/>
+            </form>
+            
+        </div>
+        <div class="half">
+            <h1 id="result"> = </h1>
+            <h1>Consumo: <span id="consumo"></span></h1>
+        </div>
+        
+    </div>
 
 </body>
 

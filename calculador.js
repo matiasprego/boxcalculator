@@ -3,10 +3,19 @@ var valor_dolar = "45";
 
 //funciones
 
+function calculo_area() {
+    var largo = Number(document.getElementById("largo").value);
+    var ancho = Number(document.getElementById("ancho").value);
+    var alto = Number(document.getElementById("alto").value);
+    var result = largo*ancho*alto;
+    document.getElementById("consumo").innerHTML =  result;
+}
+
 function calculator() {
-    var x = Number(document.getElementById("x").value);
-    var y = Number(document.getElementById("y").value);
-    var z = Number(document.getElementById("z").value);
+    calculo_area();
+    var largo = Number(document.getElementById("largo").value);
+    var ancho = Number(document.getElementById("ancho").value);
+    var alto = Number(document.getElementById("alto").value);
     var p = Number(30);
     var result;
     var calc = document.getElementById("tipo-caja").value
@@ -24,3 +33,4 @@ function calculator() {
     }
 
     document.getElementById("result").innerHTML = " = " + result;
+}
